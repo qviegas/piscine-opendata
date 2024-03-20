@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #44CBFEFF; /* Blue background color for the whole page */
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#zoneList {
+    width: 25%;
+    height: 100%; /* Full height */
+    overflow: auto;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+}
+
+/* Additional styling for clickable zones */
+.clickable-zone {
+    background-color: #f2f2f2; /* Light grey background */
+    margin: 5px 0; /* Space between zones */
+    padding: 10px; /* Inner space within each zone */
+    border: 1px solid #dcdcdc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold font for zone names */
+    cursor: pointer; /* Cursor indicates the zone is clickable */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for clickable zones */
+.clickable-zone:hover {
+    background-color: #e8e8e8; /* Slightly darker background on hover */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+#zoneDetails {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.detail {
+    text-align: left; /* Ensure the text of the details is not centered */
+    width: 100%; /* Details take up the full width of zoneDetails */
+}
+
+.affluence-svg-container {
+    /* Increase the size of the SVG container */
+    width: 100%;
+    max-width: 2400px; /* Assuming the original max-width was 800px, so 3 times larger */
+    height: auto; /* Maintain the aspect ratio of the SVG */
+}
+
+.affluence-text {
+    /* Adjust the font size as needed to match the larger circle */
+    font-size: 42px; /* Adjust the size according to your needs */
+    fill: #033988; /* The text will be blue for good visibility on the light blue background */
+    font-weight: bold;
+}
+
+.circle-background {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 15;
+}
+
+.circle-foreground {
+    fill: none;
+    stroke-width: 15;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.6s ease 0s;
+}
+
+.affluence-title {
+    font-size: 18px;
+    color: #033988; /* The text will be blue for good visibility on the light blue background */
+    margin-bottom: 10px;
+}
+
+.last-refresh-info {
+    position: fixed; /* fixed position to the bottom right corner of the window */
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #033988; /* or any other color that suits your design */
+    z-index: 10; /* to ensure it stays on top of other elements */
+}
